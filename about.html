@@ -1,42 +1,46 @@
 <!doctype html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About — Andrea</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            (function () {
+                try {
+                const isDark = localStorage.getItem("theme") === "dark";
+                document.documentElement.classList.toggle("dark", isDark);
+                document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+                } catch {}
+            })();
+        </script>
+        <link rel="stylesheet" href="/src/styles.css">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <title>About — Andrea</title>
+    </head>
 
-  <body class="min-h-screen bg-white text-slate-900">
-    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
-      <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <a href="/" class="font-semibold tracking-tight">Andrea</a>
-        <div class="flex items-center gap-4 text-sm">
-          <a class="hover:underline" href="/">Home</a>
-          <a class="hover:underline" href="/#contact">Contact</a>
+    <body class="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+        <div data-include="header"></div>
+        <main class="mx-auto max-w-5xl px-4 py-14">
+        <h1 class="about-title text-4xl font-semibold tracking-tight md:text-5xl">About</h1>
+
+        <p class="about-body mt-6 max-w-2xl text-base leading-relaxed text-slate-700 dark:text-slate-300">
+            Aquí cuenta tu narrativa: qué construyes, cómo piensas, y qué te hace buena puenteando diseño y frontend.
+            (La versión 1 puede ser corta; la versión 2 ya lleva “capítulos”.)
+        </p>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+            <h2 class="font-semibold">Focus</h2>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Design systems, tokens, accesibilidad, UI engineering.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+            <h2 class="font-semibold">Toolkit</h2>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Figma, TS, Tailwind, GSAP, documentación y pragmatismo.</p>
+            </div>
         </div>
-      </nav>
-    </header>
+        </main>
+        <div data-include="footer"></div>
 
-    <main class="mx-auto max-w-5xl px-4 py-14">
-      <h1 class="about-title text-4xl font-semibold tracking-tight md:text-5xl">About</h1>
-
-      <p class="about-body mt-6 max-w-2xl text-base leading-relaxed text-slate-700">
-        Aquí cuenta tu narrativa: qué construyes, cómo piensas, y qué te hace buena puenteando diseño y frontend.
-        (La versión 1 puede ser corta; la versión 2 ya lleva “capítulos”.)
-      </p>
-
-      <div class="mt-10 grid gap-4 sm:grid-cols-2">
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <h2 class="font-semibold">Focus</h2>
-          <p class="mt-2 text-sm text-slate-600">Design systems, tokens, accesibilidad, UI engineering.</p>
-        </div>
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <h2 class="font-semibold">Toolkit</h2>
-          <p class="mt-2 text-sm text-slate-600">Figma, TS, Tailwind, GSAP, documentación y pragmatismo.</p>
-        </div>
-      </div>
-    </main>
-
-    <script type="module" src="/src/about.ts"></script>
-  </body>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
+
