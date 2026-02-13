@@ -2,6 +2,7 @@ import "./styles.css";
 import gsap from "gsap";
 import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
+import { initEmojiRotator } from "./emoji-rotator";
 
 gsap.from([".hero-kicker", ".hero-title", ".hero-sub", ".hero-cta"], {
     y: 14,
@@ -19,6 +20,12 @@ gsap.from([".about-title", ".about-body"], {
     ease: "power2.out",
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+    initEmojiRotator();
+});
+
 await loadPartials();
 setActiveNav();
 initThemeToggle();
+
+
