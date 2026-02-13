@@ -31,22 +31,19 @@
             data-theme-toggle
             aria-label="Toggle theme"
             aria-pressed="false"
-            class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-slate-50"
-        >
-            <!-- Moon (shown in light) -->
+            class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white text-blue-700 shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-blue-200 dark:hover:bg-slate-800 dark:hover:text-slate-50">
+            <!-- Sun (shown in light) -->
             <svg class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.719 3.47165C11.0764 3.1672 11.5306 3 12.0002 3C12.4698 3 12.924 3.1672 13.2814 3.47165C13.6999 3.82357 14.2603 4.31218 14.9609 4.96232C15.8656 4.99799 16.5722 5.04649 17.0965 5.09178C17.5645 5.12932 18.0038 5.33226 18.3358 5.66423C18.6677 5.99621 18.8707 6.43553 18.9082 6.90351C18.9539 7.42819 19.002 8.13444 19.0377 9.03871C19.6878 9.74015 20.176 10.3001 20.5284 10.719C20.8328 11.0764 21 11.5306 21 12.0002C21 12.4698 20.8328 12.924 20.5284 13.2814C20.0451 13.8532 19.548 14.4132 19.0377 14.9609C19.0112 15.6737 18.968 16.3857 18.9082 17.0965C18.8707 17.5645 18.6677 18.0038 18.3358 18.3358C18.0038 18.6677 17.5645 18.8707 17.0965 18.9082C16.3859 18.968 15.6739 19.0112 14.9613 19.0377C14.4133 19.548 13.853 20.0451 13.281 20.5284C12.9236 20.8328 12.4694 21 11.9998 21C11.5302 21 11.076 20.8328 10.7186 20.5284C10.1468 20.0451 9.58684 19.548 9.03911 19.0377C8.32633 19.0112 7.61427 18.968 6.90351 18.9082C6.43553 18.8707 5.99621 18.6677 5.66423 18.3358C5.33226 18.0038 5.12932 17.5645 5.09178 17.0965C5.03197 16.3859 4.9888 15.6739 4.96232 14.9613C4.45197 14.4133 3.95494 13.853 3.47165 13.281C3.1672 12.9236 3 12.4694 3 11.9998C3 11.5302 3.1672 11.076 3.47165 10.7186C3.95495 10.1468 4.45198 9.58684 4.96232 9.03911C4.99799 8.13444 5.04649 7.42779 5.09178 6.90351C5.12932 6.43553 5.33226 5.99621 5.66423 5.66423C5.99621 5.33226 6.43553 5.12932 6.90351 5.09178C7.42819 5.04609 8.13444 4.99799 9.03871 4.96232C9.74015 4.31218 10.3001 3.82397 10.719 3.47165ZM12 16.0082C14.2138 16.0082 16.0082 14.2138 16.0082 12C16.0082 9.78624 14.2138 7.99175 12 7.99175C9.78624 7.99175 7.99175 9.78624 7.99175 12C7.99175 14.2138 9.78624 16.0082 12 16.0082Z" fill="currentColor"/>
             </svg>
-            <!-- Sun (shown in dark) -->
+            <!-- Moon (shown in dark) -->
             <svg class="hidden h-5 w-5 dark:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"
-                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M11.1373 4.00445C7.12757 4.44106 4 7.84485 4 11.9793C4 14.1062 4.8449 16.1459 6.34883 17.6499C7.85276 19.1538 9.89253 19.9987 12.0194 19.9987C16.1449 19.9987 19.5487 16.88 19.9943 12.8703C20.0745 12.1664 19.2992 11.6051 18.622 12.0239C17.8947 12.4881 17.0559 12.7484 16.1934 12.7774C15.331 12.8063 14.4766 12.603 13.7197 12.1885C12.9628 11.7741 12.3312 11.1638 11.891 10.4216C11.4508 9.67942 11.2182 8.83253 11.2175 7.9696C11.2175 7.02509 11.4937 6.13405 11.9659 5.39448C12.3669 4.79748 11.9303 3.94207 11.1373 4.00445Z" fill="currentColor"/>
             </svg>
         </button>
 
         <!-- Social (you can swap GH/in for icons later) -->
-        <a class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50"
+        <a class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-blue-700 shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-blue-200 dark:hover:bg-slate-800 dark:hover:text-slate-50"
             href="#"
             aria-label="GitHub">
             <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
@@ -56,7 +53,7 @@
             </svg>
         </a>
 
-        <a class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50"
+        <a class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-blue-700 shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-blue-200 dark:hover:bg-slate-800 dark:hover:text-slate-50"
             href="#"
             aria-label="LinkedIn">
             <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
