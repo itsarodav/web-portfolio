@@ -19,17 +19,21 @@ export function setActiveNav() {
     const about = document.querySelector('[data-nav="about"]');
     const work = document.querySelector('[data-nav="work"]');
     const contact = document.querySelector('[data-nav="contact"]');
+    const resume = document.querySelector('[data-nav="resume"]');
+    const activeClasses = ["bg-zinc-200", "dark:bg-zinc-700", "text-zinc-900", "dark:text-white"];
 
     // reset
-    [about, work, contact].forEach((el) => {
-        el?.classList.remove("bg-slate-900", "text-white");
+    [about, work, contact, resume].forEach((el) => {
+        el?.classList.remove(...activeClasses);
     });
 
     // active
     if (path.endsWith("about.html")) {
-        about?.classList.add("bg-slate-900", "text-white");
+        about?.classList.add(...activeClasses);
+    } else if (path.endsWith("resume.html")) {
+        resume?.classList.add(...activeClasses);
     } else {
         // home
-        work?.classList.add("bg-slate-900", "text-white");
+        work?.classList.add(...activeClasses);
     }
 }

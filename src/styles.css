@@ -6,6 +6,8 @@
     --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
     --tracking-1: 0em;
     --tracking-2: 0.05em;
+    --color-brand-1: #3FBF9B;
+    --color-brand-2: #0551D8;
 }
 
 @layer base {
