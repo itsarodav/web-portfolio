@@ -6,7 +6,7 @@ export function initEmojiRotator() {
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
     if (reduce) return;
 
-    const emojis = ["💻", "🚀", "✨", "🪄", "👾"];
+    const emojis = ["💻", "🚀", "✨", "🪄", "👾", "🤖", "🛸", "🌐", "💡"];
     let i = 0;
 
     const outClasses = ["opacity-0", "-translate-y-1", "scale-95"];
@@ -28,5 +28,5 @@ export function initEmojiRotator() {
         el.classList.remove(...outClasses);
         el.classList.add(...inClasses);
         }, 180);
-    }, 2200);
+    }, 2000);
 }
