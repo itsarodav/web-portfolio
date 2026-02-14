@@ -4,6 +4,26 @@ import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
 import { initEmojiRotator } from "./emoji-rotator";
 
+function initCopyEmail() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-copy-email]");
+
+    buttons.forEach((button) => {
+        const feedback = button.parentElement?.querySelector<HTMLElement>("[data-copy-feedback]");
+
+        button.addEventListener("click", async () => {
+            const text = button.dataset.copyText?.trim() || "";
+            if (!text) return;
+
+            try {
+                await navigator.clipboard.writeText(text);
+                if (feedback) feedback.textContent = "Email copied to clipboard.";
+            } catch {
+                if (feedback) feedback.textContent = "Couldn't copy automatically. Please copy it manually.";
+            }
+        });
+    });
+}
+
 gsap.from([".hero-kicker", ".hero-title", ".hero-sub", ".hero-cta"], {
     y: 14,
     opacity: 0,
@@ -27,5 +47,5 @@ window.addEventListener("DOMContentLoaded", () => {
 await loadPartials();
 setActiveNav();
 initThemeToggle();
-
+initCopyEmail();
 
