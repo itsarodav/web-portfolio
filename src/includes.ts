@@ -9,7 +9,7 @@ async function inject(selector: string, url: string) {
 export async function loadPartials() {
     await Promise.all([
         inject('[data-include="header"]', "/partials/header.html"),
-        inject('[data-include="experiences"]', "/partials/experience.html"),
+        inject('[data-include="experience"]', "/partials/experience.html"),
         inject('[data-include="contact"]', "/partials/contact.html"),
         inject('[data-include="footer"]', "/partials/footer.html"),
     ]);
