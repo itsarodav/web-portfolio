@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+        (function () {
+            try {
+            const isDark = localStorage.getItem("theme") === "dark";
+            document.documentElement.classList.toggle("dark", isDark);
+            document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+            } catch {}
+        })();
+        </script>
+        <link rel="stylesheet" href="/src/styles.css">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <title>Arodav - Web Portfolio</title>
+        <meta name="description" content="Portfolio de Andrea (arodav) — Product Designer / Design Engineer" />
+    </head>
+
+    <body class="flex min-h-screen flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+        <div data-include="header"></div>
+        <main class="mx-auto max-w-6xl grow px-4 pb-14">
+
+        <div data-include="contact"></div>
+        </main>
+        <div data-include="footer"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
