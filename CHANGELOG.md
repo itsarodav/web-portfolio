@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
-- Resume info updated and translated to Spanish
+- Resume info updated and translated to English
 - Homepage content updates
 
 ## [0.5.0] - 2026-02-17
