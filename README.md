@@ -22,13 +22,13 @@ A personal portfolio website built with modern web technologies, featuring a cle
 
 I built this portfolio to have a personal space that reflects both my technical skills and design taste. The architecture uses a multi-page setup with Vite, where each page (`index`, `about`, `resume`) has its own TypeScript entry point, keeping the codebase modular and maintainable.
 
-Shared UI components like the header, footer, and contact section live as HTML partials that get dynamically loaded via JavaScript — avoiding duplication while staying close to the platform without heavy frameworks.
+Shared UI components like the header, footer, and contact section live as HTML partials that get dynamically loaded via JavaScript, avoiding duplication while staying close to the platform without heavy frameworks.
 
 The visual language relies on a consistent zinc color ramp with carefully crafted card components, making the dark/light mode transition feel cohesive rather than an afterthought.
 
 ## 📚 What I Learned
 
-Working on this project deepened my understanding of **TypeScript** beyond basic type annotations. I used it to manage DOM interactions safely — typing event listeners, handling nullable elements with proper guards, and structuring module entry points per page. It forced me to think about the shape of data flowing through the UI, even in a project without a framework.
+Working on this project deepened my understanding of **TypeScript** beyond basic type annotations. I used it to manage DOM interactions safely, typing event listeners, handling nullable elements with proper guards, and structuring module entry points per page. It forced me to think about the shape of data flowing through the UI, even in a project without a framework.
 
 **Tailwind CSS v4** was another major learning curve. Building a full design system using only utility classes taught me how to think in constraints: spacing scales, color ramps, responsive breakpoints. I learned to compose complex layouts (like nested card grids with consistent borders and padding across themes) without writing a single line of custom CSS. The dark mode variant system (`dark:`) became second nature, and I gained a deep appreciation for how utility-first CSS eliminates specificity wars and dead code.
 
