@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-02-21
+
+### Changed
+
+- Static assets reorganized into `public/assets/` folder (images, SVGs, logos)
+- Work section images updated to optimized WebP format
+- Work section grid layout and cards redesigned
+- Asset references updated across all pages and partials
+
 ## [0.6.1] - 2026-02-19
 
 ### Changed
