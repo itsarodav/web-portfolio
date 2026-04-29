@@ -15,4 +15,8 @@
         font-family: var(--font-sans);
         overflow-x: clip;
     }
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
 }
