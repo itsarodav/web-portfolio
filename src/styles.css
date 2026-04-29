@@ -13,5 +13,6 @@
 @layer base {
     html {
         font-family: var(--font-sans);
+        overflow-x: clip;
     }
 }
