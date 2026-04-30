@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
 import { initEmojiRotator } from "./emoji-rotator";
+import { initMobileMenu } from "./mobile-menu";
 
 function initCopyEmail() {
     const buttons = document.querySelectorAll<HTMLButtonElement>("[data-copy-email]");
@@ -24,13 +25,20 @@ function initCopyEmail() {
     });
 }
 
-gsap.from([".hero-kicker", ".hero-title", ".hero-sub", ".hero-cta"], {
-    y: 14,
-    opacity: 0,
-    duration: 0.7,
-    stagger: 0.08,
-    ease: "power2.out",
-});
+// Hero entrance timeline
+const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+heroTl
+    .fromTo(
+        ".hero-title",
+        { y: 40, opacity: 0, scale: 0.97, clipPath: "inset(0 0 100% 0)" },
+        { y: 0, opacity: 1, scale: 1, clipPath: "inset(0 0 0% 0)", duration: 1.1 },
+    )
+    .fromTo(
+        ".hero-cta",
+        { y: 24, opacity: 0, scale: 0.95 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.7 },
+        "-=0.35",
+    );
 
 gsap.from([".about-title", ".about-body"], {
     y: 12,
@@ -48,4 +56,5 @@ await loadPartials();
 setActiveNav();
 initThemeToggle();
 initCopyEmail();
+initMobileMenu();
 

@@ -66,44 +66,52 @@
         </a>
 
         <!-- Mobile menu -->
-        <details class="relative md:hidden">
-            <summary
-            class="inline-flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-sm hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 [&::-webkit-details-marker]:hidden"
-            aria-label="Open menu"
+        <div class="relative md:hidden">
+            <button
+                type="button"
+                data-mobile-menu-toggle
+                class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-sm hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+                aria-label="Toggle menu"
+                aria-expanded="false"
             >
-            <svg class="h-5 w-5 text-zinc-700 dark:text-zinc-200" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            </summary>
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+            </button>
 
-            <div class="absolute right-0 mt-2 w-56 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
-            <div class="grid gap-1 p-2">
-                <a href="/#work"
-                class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Work</a>
-                <a href="/about.html"
-                class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">About</a>
-                <a href="#contact"
-                class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Contact</a>
+            <div
+                data-mobile-menu-panel
+                class="pointer-events-none invisible absolute right-0 mt-2 w-56 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
+            >
+                <div class="grid gap-1 p-2">
+                    <a data-menu-item href="/#work"
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Work</a>
+                    <a data-menu-item href="/about.html"
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">About</a>
+                    <a data-menu-item href="#contact"
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Contact</a>
 
-                <div class="my-1 h-px bg-zinc-200/70 dark:bg-zinc-800/70"></div>
+                    <div class="my-1 h-px bg-zinc-200/70 dark:bg-zinc-800/70"></div>
 
-                <a href="#" class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            fill="currentColor"
-                            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.9.58.1.79-.25.79-.56v-2.1c-3.2.7-3.88-1.35-3.88-1.35-.52-1.3-1.27-1.65-1.27-1.65-1.04-.7.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.17.91-.25 1.89-.37 2.86-.37s1.95.12 2.86.37c2.19-1.48 3.15-1.17 3.15-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.7 5.38-5.28 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                    </svg>
-                </a>
-                <a href="#" class="rounded-xl px-3 py-2 text-sm font-medium -color-brand-1 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            fill="currentColor"
-                            d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.84-2.05 3.79-2.05C21.02 8.6 22 10.76 22 14.01V21h-4v-6.19c0-1.48-.03-3.39-2.07-3.39-2.08 0-2.4 1.62-2.4 3.28V21h-4V9Z" />
-                    </svg>
-                </a>
+                    <a data-menu-item href="https://github.com/itsarodav" target="_blank" rel="noopener noreferrer"
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                fill="currentColor"
+                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.9.58.1.79-.25.79-.56v-2.1c-3.2.7-3.88-1.35-3.88-1.35-.52-1.3-1.27-1.65-1.27-1.65-1.04-.7.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.17.91-.25 1.89-.37 2.86-.37s1.95.12 2.86.37c2.19-1.48 3.15-1.17 3.15-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.7 5.38-5.28 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                        </svg>
+                    </a>
+                    <a data-menu-item href="https://www.linkedin.com/in/itsarodav" target="_blank" rel="noopener noreferrer"
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                fill="currentColor"
+                                d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.84-2.05 3.79-2.05C21.02 8.6 22 10.76 22 14.01V21h-4v-6.19c0-1.48-.03-3.39-2.07-3.39-2.08 0-2.4 1.62-2.4 3.28V21h-4V9Z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-            </div>
-        </details>
+        </div>
         </div>
     </nav>
 </header>
