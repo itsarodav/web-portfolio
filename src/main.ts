@@ -28,52 +28,74 @@ function initCopyEmail() {
     });
 }
 
-// Hero entrance timeline
-const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+// Hero entrada
+const heroTl = gsap.timeline({ defaults: { ease: "power2.out" } });
 heroTl
     .fromTo(
         ".hero-title",
-        { y: 40, opacity: 0, scale: 0.97, clipPath: "inset(0 0 100% 0)" },
-        { y: 0, opacity: 1, scale: 1, clipPath: "inset(0 0 0% 0)", duration: 1.1 },
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.1 },
     )
     .fromTo(
         ".hero-cta",
-        { y: 24, opacity: 0, scale: 0.95 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.7 },
-        "-=0.35",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8 },
+        "-=0.3",
     );
 
 gsap.from([".about-title", ".about-body"], {
     y: 12,
     opacity: 0,
-    duration: 0.7,
+    duration: 0.9,
     stagger: 0.1,
     ease: "power2.out",
 });
 
-// Work cards: first 2 animate on load, rest on scroll
-gsap.fromTo(
-    ".work-card:nth-child(-n+2)",
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out", delay: 0.4 },
-);
+// Work cards - responsive animation (desktop loads 2, mobile loads 1)
+const mm = gsap.matchMedia();
 
-gsap.utils.toArray<HTMLElement>(".work-card:nth-child(n+3)").forEach((card) => {
+mm.add("(min-width: 768px)", () => {
     gsap.fromTo(
-        card,
-        { y: 40, opacity: 0 },
-        {
-            y: 0,
-            opacity: 1,
-            duration: 0.95,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: card,
-                start: "top 85%",
-                toggleActions: "play none none none",
-            },
-        },
+        ".work-card:nth-child(-n+2)",
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: "power3.out", delay: 0.4 },
     );
+
+    gsap.utils.toArray<HTMLElement>(".work-card:nth-child(n+3)").forEach((card) => {
+        gsap.fromTo(
+            card,
+            { y: 40, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.15,
+                ease: "power2.out",
+                scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" },
+            },
+        );
+    });
+});
+
+mm.add("(max-width: 767px)", () => {
+    gsap.fromTo(
+        ".work-card:first-child",
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.0, ease: "power3.out", delay: 0.4 },
+    );
+
+    gsap.utils.toArray<HTMLElement>(".work-card:nth-child(n+2)").forEach((card) => {
+        gsap.fromTo(
+            card,
+            { y: 40, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.15,
+                ease: "power2.out",
+                scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" },
+            },
+        );
+    });
 });
 
 window.addEventListener("DOMContentLoaded", () => {
