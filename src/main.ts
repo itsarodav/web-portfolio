@@ -5,6 +5,7 @@ import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
 import { initEmojiRotator } from "./emoji-rotator";
 import { initMobileMenu } from "./mobile-menu";
+import { initPageTransition } from "./page-transition";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,6 +108,7 @@ setActiveNav();
 initThemeToggle();
 initCopyEmail();
 initMobileMenu();
+initPageTransition();
 
 // ScrollTrigger animations for partial-loaded sections
 gsap.fromTo(

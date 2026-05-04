@@ -20,10 +20,10 @@
 
     <body class="flex min-h-screen flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
         <div data-include="header"></div>
-        <main class="mx-auto w-full max-w-5xl grow px-4 py-14">
+        <main class="mx-auto w-full max-w-5xl grow px-4 py-14" style="visibility:hidden">
             <section class="mb-14">
                 <!-- Title + PDF button -->
-                <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="resume-header flex flex-wrap items-center justify-between gap-4">
                     <h1 class="text-3xl font-semibold tracking-tight md:text-3xl">My career lore (so far) </h1>
                     <a
                         href="/cv/CV_Robles_Davila_ES_SF.pdf"
@@ -41,7 +41,7 @@
                 <div id="resume-content" class="mt-8 flex flex-col gap-8">
 
                     <!-- Intro: name, title, contact -->
-                    <section class="flex flex-col gap-4">
+                    <section class="resume-intro flex flex-col gap-4">
                         <div class="flex flex-col gap-2">
                             <h2 class="text-2xl font-bold text-zinc-900 md:text-5xl dark:text-zinc-100">Andrea Robles Dávila</h2>
                             <p class="mt-1 text-lg font-medium text-zinc-600 dark:text-zinc-400 md:text-3xl">Design Engineer</p>
@@ -60,8 +60,8 @@
 
                     <!-- Professional Experience -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Professional Experience</h3>
-                        <ol class="space-y-8 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Professional Experience</h3>
+                        <ol class="resume-section-card space-y-8 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                                                         <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
                                     <div class="flex flex-col gap-2 md:flex-row md:items-center">
@@ -137,8 +137,8 @@
 
                     <!-- Education -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Education</h3>
-                        <ol class="space-y-8 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Education</h3>
+                        <ol class="resume-section-card space-y-8 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                             <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
                                     <div class="flex flex-col gap-2 md:flex-row md:items-center">
@@ -192,8 +192,8 @@
 
                     <!-- Achievements & Volunteering -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Achievements & Volunteering</h3>
-                        <ul class="space-y-5 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Achievements & Volunteering</h3>
+                        <ul class="resume-section-card space-y-5 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                             <li>
                                 <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Leftherian  |  2017 ASEP Hackathon Winners</h4>
                                 <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300">First Intellectual Property Blockchain platform in Latin America.</p>
@@ -215,8 +215,8 @@
 
                     <!-- Skills & Interests -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Skills & Interests</h3>
-                        <dl class="space-y-5 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Skills & Interests</h3>
+                        <dl class="resume-skills-card space-y-5 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                             <div>
                                 <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">Technical</dt>
                                 <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
