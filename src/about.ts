@@ -1,6 +1,8 @@
 import "./styles.css";
 import gsap from "gsap";
 import { loadPartials, setActiveNav } from "./includes";
+import { initThemeToggle } from "./theme";
+import { initMobileMenu } from "./mobile-menu";
 
 gsap.from([".about-title", ".about-body"], {
     y: 12,
@@ -12,3 +14,5 @@ gsap.from([".about-title", ".about-body"], {
 
 await loadPartials();
 setActiveNav();
+initThemeToggle();
+initMobileMenu();
