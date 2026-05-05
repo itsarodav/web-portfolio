@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-05-05
+
+### Added
+
+- Page transitions module (`src/page-transition.ts`)
+- Favicon set: `apple-touch-icon.png`, `favicon-48x48.png`, `favicon.ico`
+- Web manifest (`public/site.webmanifest`)
+
+### Changed
+
+- Favicon SVG updated
+- Meta descriptions and keywords updated across all pages
+- Favicon references fixed in all HTML files
+- Page transitions integrated in entry points (`main.ts`, `about.ts`, `resume.ts`)
+- Header actions fixes in about and resume pages
+
+### Removed
+
+- Default Vite favicon (`public/vite.svg`)
+
 ## [0.7.0] - 2026-02-21
 
 ### Changed
