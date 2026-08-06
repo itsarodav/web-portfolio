@@ -10,8 +10,8 @@ export function initMobileMenu() {
     const items = panel.querySelectorAll<HTMLElement>("[data-menu-item]");
     let isOpen = false;
 
-    // Set initial hidden state
-    gsap.set(panel, { autoAlpha: 0, scale: 0.92 });
+    // Set initial hidden state (panel anchored to bottom, slides up)
+    gsap.set(panel, { autoAlpha: 0, scale: 0.92, y: 10, transformOrigin: "bottom center" });
     gsap.set(items, { y: 8, opacity: 0 });
 
     // Build paused timeline
@@ -20,6 +20,7 @@ export function initMobileMenu() {
     tl.to(panel, {
         autoAlpha: 1,
         scale: 1,
+        y: 0,
         duration: 0.3,
         ease: "back.out(2)",
     }).to(
