@@ -32,10 +32,11 @@ gsap.fromTo(
 // Polaroid collage
 gsap.fromTo(
     ".about-polaroids",
-    { scale: 0.95, opacity: 0 },
+    { scale: 0.95, opacity: 0, rotation: -2 },
     {
         scale: 1,
         opacity: 1,
+        rotation: 0,
         duration: 0.9,
         ease: "power3.out",
         scrollTrigger: { trigger: ".about-polaroids", start: "top 80%", toggleActions: "play none none none" },

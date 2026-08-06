@@ -45,13 +45,15 @@ heroTl
         "-=0.3",
     );
 
-gsap.from([".about-title", ".about-body"], {
-    y: 12,
-    opacity: 0,
-    duration: 0.9,
-    stagger: 0.1,
-    ease: "power2.out",
-});
+if (document.querySelector(".about-title")) {
+    gsap.from([".about-title", ".about-body"], {
+        y: 12,
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.1,
+        ease: "power2.out",
+    });
+}
 
 // Work cards - responsive animation (desktop loads 2, mobile loads 1)
 const mm = gsap.matchMedia();
@@ -100,14 +102,25 @@ mm.add("(max-width: 767px)", () => {
     });
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-    initEmojiRotator();
+// Work card image clip-path reveal
+gsap.utils.toArray<HTMLElement>(".work-card .aspect-4\\/3").forEach((img) => {
+    gsap.fromTo(
+        img,
+        { clipPath: "inset(0 0 8% 0)" },
+        {
+            clipPath: "inset(0 0 0% 0)",
+            duration: 0.8,
+            ease: "cubic-bezier(0.23, 1, 0.32, 1)",
+            scrollTrigger: { trigger: img, start: "top 85%", toggleActions: "play none none none" },
+        },
+    );
 });
 
 await loadPartials();
 setActiveNav();
 initThemeToggle();
 await initI18n();
+initEmojiRotator();
 initCopyEmail();
 initMobileMenu();
 initPageTransition();
@@ -121,8 +134,8 @@ gsap.fromTo(
 
 gsap.fromTo(
     "[data-anim='exp-list'] > li",
-    { x: -20, opacity: 0 },
-    { x: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: "power2.out", scrollTrigger: { trigger: "[data-anim='exp-list']", start: "top 80%" } },
+    { x: -20, opacity: 0, scale: 0.97 },
+    { x: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: "power2.out", scrollTrigger: { trigger: "[data-anim='exp-list']", start: "top 80%" } },
 );
 
 gsap.fromTo(
