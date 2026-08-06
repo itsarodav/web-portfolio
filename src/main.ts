@@ -21,58 +21,62 @@ function initCopyEmail() {
             const text = button.dataset.copyText?.trim() || "";
             if (!text) return;
 
+            let copied = false;
             try {
-                await navigator.clipboard.writeText(text);
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                    copied = true;
+                } else {
+                    // Fallback for mobile / non-secure contexts
+                    const ta = document.createElement("textarea");
+                    ta.value = text;
+                    ta.style.position = "fixed";
+                    ta.style.left = "-9999px";
+                    ta.style.opacity = "0";
+                    document.body.appendChild(ta);
+                    ta.focus();
+                    ta.select();
+                    copied = document.execCommand("copy");
+                    document.body.removeChild(ta);
+                }
+            } catch {
+                copied = false;
+            }
 
-                // Floating feedback tag
-                if (feedback) {
-                    const lang = document.documentElement.lang;
+            if (feedback) {
+                const lang = document.documentElement.lang;
+                if (copied) {
                     feedback.textContent = lang === "es" ? "Email copiado" : "Email copied";
                     feedback.classList.remove("bg-red-500");
                     feedback.classList.add("bg-brand-1");
-                    gsap.killTweensOf(feedback);
-                    gsap.fromTo(
-                        feedback,
-                        { y: 6, opacity: 0 },
-                        {
-                            y: 0,
-                            opacity: 1,
-                            duration: 0.3,
-                            ease: "power2.out",
-                            onComplete() {
-                                gsap.to(feedback, { y: -4, opacity: 0, duration: 0.25, ease: "power2.in", delay: 1.8 });
-                            },
-                        },
-                    );
+                } else {
+                    feedback.textContent = lang === "es" ? "No se pudo copiar" : "Couldn't copy";
+                    feedback.classList.remove("bg-brand-1");
+                    feedback.classList.add("bg-red-500");
                 }
+                gsap.killTweensOf(feedback);
+                gsap.fromTo(
+                    feedback,
+                    { y: 6, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: "power2.out",
+                        onComplete() {
+                            gsap.to(feedback, { y: -4, opacity: 0, duration: 0.25, ease: "power2.in", delay: 1.8 });
+                        },
+                    },
+                );
+            }
 
-                // Button pulse
+            // Button pulse
+            if (copied) {
                 gsap.fromTo(
                     button,
                     { scale: 1 },
                     { scale: 1.03, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 },
                 );
-            } catch {
-                if (feedback) {
-                    const lang = document.documentElement.lang;
-                    feedback.textContent = lang === "es" ? "No se pudo copiar" : "Couldn't copy";
-                    feedback.classList.remove("bg-brand-1");
-                    feedback.classList.add("bg-red-500");
-                    gsap.killTweensOf(feedback);
-                    gsap.fromTo(
-                        feedback,
-                        { y: 6, opacity: 0 },
-                        {
-                            y: 0,
-                            opacity: 1,
-                            duration: 0.3,
-                            ease: "power2.out",
-                            onComplete() {
-                                gsap.to(feedback, { y: -4, opacity: 0, duration: 0.25, ease: "power2.in", delay: 2.5 });
-                            },
-                        },
-                    );
-                }
             }
         });
     });
