@@ -23,7 +23,7 @@
       (function () {
         try {
           const lang = localStorage.getItem("lang") ||
-            (navigator.language.startsWith("es") ? "es" : "en");
+            "en";
           document.documentElement.lang = lang;
         } catch {}
       })();
@@ -50,18 +50,7 @@
   </head>
 
   <body class="flex min-h-screen flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
-    <!-- Mobile mesh gradient -->
-    <div class="pointer-events-none fixed -inset-x-16 -top-20 h-32 md:hidden overflow-visible"
-         aria-hidden="true">
-      <div class="absolute inset-0 blur-[80px] saturate-200
-                  opacity-50 dark:opacity-30"
-           style="background:
-             radial-gradient(circle at 10% 50%, #3FBF9B 0%, transparent 55%),
-             radial-gradient(circle at 50% 40%, #6366f1 0%, transparent 50%),
-             radial-gradient(circle at 90% 50%, #0551D8 0%, transparent 55%)">
-      </div>
-    </div>
-    <div data-include="header"></div>
+<div data-include="header"></div>
     <main class="mx-auto w-full max-w-6xl grow px-4 pb-14" style="visibility:hidden">
       <!-- HERO -->
       <section class="mx-auto flex min-h-[76vh] md:min-h-[72vh] max-w-7xl gap-4 flex-col items-center justify-center px-4 py-10 text-center md:px-9 md:py-16">

@@ -23,7 +23,7 @@
         (function () {
             try {
             const lang = localStorage.getItem("lang") ||
-                (navigator.language.startsWith("es") ? "es" : "en");
+                "en";
             document.documentElement.lang = lang;
             } catch {}
         })();

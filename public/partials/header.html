@@ -1,6 +1,6 @@
 <header class="fixed inset-x-0 top-0 z-50 hidden md:block">
-    <div class="absolute inset-0 border-b border-zinc-200/40
-        pb-6 bg-white/70 backdrop-blur-md supports-backdrop-filter:bg-white/40
+    <div class="absolute inset-0 -bottom-8 border-b border-zinc-200/40
+        pb-14 bg-white/70 backdrop-blur-md supports-backdrop-filter:bg-white/40
         dark:border-zinc-800/50 dark:bg-zinc-950/60
         mask-[linear-gradient(to_bottom,black_65%,transparent)]
         [-webkit-mask-image:linear-gradient(to_bottom,black_65%,transparent)]"
@@ -14,41 +14,49 @@
 
         <!-- Desktop nav (hidden on mobile) -->
         <div class="hidden md:flex items-center">
-        <div class="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-white px-1.5 py-1 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div class="inline-flex items-center gap-1 rounded-full
+                    bg-zinc-900 ring-1 ring-inset ring-white/[0.06]
+                    border border-zinc-700/30
+                    px-1.5 py-1
+                    dark:bg-zinc-800 dark:ring-white/[0.08] dark:border-zinc-600/20">
             <a data-nav="work" href="/#work"
-            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
+            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-400 hover:bg-white/10 hover:text-white">
             <span data-i18n="nav.work">Work</span>
             </a>
             <a data-nav="about" href="/about.html"
-            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
+            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-400 hover:bg-white/10 hover:text-white">
             <span data-i18n="nav.about">About</span>
             </a>
             <a data-nav="contact" href="#contact"
-            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
+            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-400 hover:bg-white/10 hover:text-white">
             <span data-i18n="nav.contact">Contact</span>
             </a>
             <a data-nav="resume" href="/resume.html"
-            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
+            class="rounded-full px-4 py-2 text-sm font-medium text-zinc-400 hover:bg-white/10 hover:text-white">
             <span data-i18n="nav.resume">Resume</span>
             </a>
         </div>
         </div>
 
         <!-- Desktop-only actions -->
-        <div class="hidden md:flex items-center gap-2">
+        <div class="hidden md:inline-flex items-center gap-1 rounded-full
+                    bg-zinc-900 ring-1 ring-inset ring-white/[0.06]
+                    border border-zinc-700/30
+                    px-1 py-1
+                    dark:bg-zinc-800 dark:ring-white/[0.08] dark:border-zinc-600/20">
         <!-- Theme toggle (desktop) -->
         <button
             type="button"
             data-theme-toggle
             aria-label="Toggle theme"
             aria-pressed="false"
-            class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-zinc-200 bg-white text-amber-500 shadow-sm hover:bg-zinc-100  hover:text-orange-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-blue-600 dark:hover:bg-zinc-800 dark:hover:text-blue-500">
+            class="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-amber-400 hover:bg-white/10 hover:text-amber-300 dark:text-blue-400 dark:hover:bg-white/10 dark:hover:text-blue-300">
             <!-- Sun (shown in light) -->
-            <svg class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.719 3.47165C11.0764 3.1672 11.5306 3 12.0002 3C12.4698 3 12.924 3.1672 13.2814 3.47165C13.6999 3.82357 14.2603 4.31218 14.9609 4.96232C15.8656 4.99799 16.5722 5.04649 17.0965 5.09178C17.5645 5.12932 18.0038 5.33226 18.3358 5.66423C18.6677 5.99621 18.8707 6.43553 18.9082 6.90351C18.9539 7.42819 19.002 8.13444 19.0377 9.03871C19.6878 9.74015 20.176 10.3001 20.5284 10.719C20.8328 11.0764 21 11.5306 21 12.0002C21 12.4698 20.8328 12.924 20.5284 13.2814C20.0451 13.8532 19.548 14.4132 19.0377 14.9609C19.0112 15.6737 18.968 16.3857 18.9082 17.0965C18.8707 17.5645 18.6677 18.0038 18.3358 18.3358C18.0038 18.6677 17.5645 18.8707 17.0965 18.9082C16.3859 18.968 15.6739 19.0112 14.9613 19.0377C14.4133 19.548 13.853 20.0451 13.281 20.5284C12.9236 20.8328 12.4694 21 11.9998 21C11.5302 21 11.076 20.8328 10.7186 20.5284C10.1468 20.0451 9.58684 19.548 9.03911 19.0377C8.32633 19.0112 7.61427 18.968 6.90351 18.9082C6.43553 18.8707 5.99621 18.6677 5.66423 18.3358C5.33226 18.0038 5.12932 17.5645 5.09178 17.0965C5.03197 16.3859 4.9888 15.6739 4.96232 14.9613C4.45197 14.4133 3.95494 13.853 3.47165 13.281C3.1672 12.9236 3 12.4694 3 11.9998C3 11.5302 3.1672 11.076 3.47165 10.7186C3.95495 10.1468 4.45198 9.58684 4.96232 9.03911C4.99799 8.13444 5.04649 7.42779 5.09178 6.90351C5.12932 6.43553 5.33226 5.99621 5.66423 5.66423C5.99621 5.33226 6.43553 5.12932 6.90351 5.09178C7.42819 5.04609 8.13444 4.99799 9.03871 4.96232C9.74015 4.31218 10.3001 3.82397 10.719 3.47165ZM12 16.0082C14.2138 16.0082 16.0082 14.2138 16.0082 12C16.0082 9.78624 14.2138 7.99175 12 7.99175C9.78624 7.99175 7.99175 9.78624 7.99175 12C7.99175 14.2138 9.78624 16.0082 12 16.0082Z" fill="currentColor"/>
             </svg>
             <!-- Moon (shown in dark) -->
-            <svg class="hidden h-5 w-5 dark:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M11.1373 4.00445C7.12757 4.44106 4 7.84485 4 11.9793C4 14.1062 4.8449 16.1459 6.34883 17.6499C7.85276 19.1538 9.89253 19.9987 12.0194 19.9987C16.1449 19.9987 19.5487 16.88 19.9943 12.8703C20.0745 12.1664 19.2992 11.6051 18.622 12.0239C17.8947 12.4881 17.0559 12.7484 16.1934 12.7774C15.331 12.8063 14.4766 12.603 13.7197 12.1885C12.9628 11.7741 12.3312 11.1638 11.891 10.4216C11.4508 9.67942 11.2182 8.83253 11.2175 7.9696C11.2175 7.02509 11.4937 6.13405 11.9659 5.39448C12.3669 4.79748 11.9303 3.94207 11.1373 4.00445Z" fill="currentColor"/>
             </svg>
         </button>
@@ -58,7 +66,7 @@
             type="button"
             data-lang-toggle
             aria-label="Switch language"
-            class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-zinc-200 bg-white text-xs font-bold text-zinc-700 shadow-sm hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800">
+            class="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-xs font-bold text-zinc-300 hover:bg-white/10 hover:text-white dark:text-zinc-400 dark:hover:bg-white/10 dark:hover:text-zinc-200">
             <span data-lang-label>ES</span>
         </button>
         </div>
@@ -110,7 +118,7 @@
         </div>
     </div>
     <!-- Glass fade behind bar -->
-    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24
                 backdrop-blur-xl
                 mask-[linear-gradient(to_top,black_45%,transparent)]
                 [-webkit-mask-image:linear-gradient(to_top,black_45%,transparent)]"
@@ -118,7 +126,7 @@
 
     <!-- Floating pill bar -->
     <div class="relative flex justify-center px-4 pb-3">
-        <div class="inline-flex items-center gap-1 rounded-full
+        <div class="inline-flex items-center gap-2 rounded-full
                     bg-zinc-900 ring-1 ring-inset ring-white/[0.08]
                     shadow-[0_4px_24px_-4px_rgba(0,0,0,0.25),0_0_0_1px_rgba(0,0,0,0.08)]
                     px-2 py-1.5
