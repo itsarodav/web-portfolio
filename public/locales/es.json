@@ -4,7 +4,7 @@
   "nav.contact": "Contacto",
   "nav.resume": "CV",
 
-  "hero.title": "Hola, soy Andrea <span aria-hidden=\"true\">➔</span> <span class=\"inline-flex align-baseline\"><img class=\"mx-1 inline-block h-9 w-9 rounded-full border-3 border-white shadow-lg dark:border-white md:h-14 md:w-14 relative -top-[0.02em]\" src=\"./assets/arodav-cartoon.webp\" width=\"40\" height=\"40\" alt=\"Foto de perfil de Andrea\" /></span> <span class=\"block md:inline\">Design engineer</span> <span aria-hidden=\"true\" class=\"inline-block text-[0.85em] leading-none relative -top-[0.08em]\">&#x1F469;&#x200D;&#x1F680;</span> construyendo design systems escalables para la era de la <span data-emoji aria-hidden=\"true\" class=\"inline-block text-[0.85em] leading-none relative -top-[0.06em] will-change-transform\">&#x1F4BB;</span> IA",
+  "hero.title": "Hola, soy Andrea <span aria-hidden=\"true\">➔</span> <span class=\"inline-flex align-baseline\"><img class=\"mx-1 inline-block h-9 w-9 rounded-full border-3 border-white shadow-lg dark:border-white md:h-14 md:w-14 relative -top-[0.02em]\" src=\"./assets/arodav-cartoon.webp\" width=\"40\" height=\"40\" alt=\"Foto de perfil de Andrea\" /></span> <span class=\"block md:inline\">Design engineer <span aria-hidden=\"true\" class=\"inline-block text-[0.85em] leading-none relative -top-[0.08em]\">&#x1F469;&#x200D;&#x1F680;</span></span> construyendo design systems escalables para la era de la <span data-emoji aria-hidden=\"true\" class=\"inline-block text-[0.85em] leading-none relative -top-[0.06em] will-change-transform\">&#x1F4BB;</span> IA",
   "hero.badge.building": "Actualmente en",
   "hero.badge.crafting": "Creando cada dia como",
 
