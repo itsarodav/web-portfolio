@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
+import { initI18n } from "./i18n";
 import { initMobileMenu } from "./mobile-menu";
 import { initPageTransition } from "./page-transition";
 
@@ -71,6 +72,7 @@ gsap.fromTo(
 await loadPartials();
 setActiveNav();
 initThemeToggle();
+await initI18n();
 initMobileMenu();
 initPageTransition();
 

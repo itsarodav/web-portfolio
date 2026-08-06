@@ -19,6 +19,15 @@
             } catch {}
         })();
         </script>
+        <script>
+        (function () {
+            try {
+            const lang = localStorage.getItem("lang") ||
+                (navigator.language.startsWith("es") ? "es" : "en");
+            document.documentElement.lang = lang;
+            } catch {}
+        })();
+        </script>
         <link rel="stylesheet" href="/src/styles.css">
 
         <!-- Icono para navegadores antiguos -->
@@ -46,7 +55,7 @@
             <section class="mb-14">
                 <!-- Title + PDF button -->
                 <div class="resume-header flex flex-wrap items-center justify-between gap-4">
-                    <h1 class="text-3xl font-semibold tracking-tight md:text-3xl">My career lore (so far) </h1>
+                    <h1 class="text-3xl font-semibold tracking-tight md:text-3xl" data-i18n="resume.title">My career lore (so far) </h1>
                     <a
                         href="/cv/CV_Robles_Davila_ES_SF.pdf"
                         download
@@ -55,7 +64,7 @@
                         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        Download PDF
+                        <span data-i18n="resume.download">Download PDF</span>
                     </a>
                 </div>
 
@@ -66,23 +75,23 @@
                     <section class="resume-intro flex flex-col gap-4">
                         <div class="flex flex-col gap-2">
                             <h2 class="text-2xl font-bold text-zinc-900 md:text-5xl dark:text-zinc-100">Andrea Robles Dávila</h2>
-                            <p class="mt-1 text-lg font-medium text-zinc-600 dark:text-zinc-400 md:text-3xl">Design Engineer</p>
+                            <p class="mt-1 text-lg font-medium text-zinc-600 dark:text-zinc-400 md:text-3xl" data-i18n="resume.role">Design Engineer</p>
                         </div>
                         <div >
                             <p class="text-sm text-zinc-500 dark:text-zinc-400">
-                                Spain&ensp;|&ensp;
+                                <span data-i18n="resume.location">Spain</span>&ensp;|&ensp;
                                 <a href="mailto:andrea.roblesdavila@gmail.com" class="underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-200">itsarodav@gmail.com</a>&ensp;|&ensp;
-                                <a href="https://github.com/itsarodav" class="underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-200" target="_blank" rel="noopener noreferrer">My github</a>
+                                <a href="https://github.com/itsarodav" class="underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-200" target="_blank" rel="noopener noreferrer"><span data-i18n="resume.github">My github</span></a>
                             </p>
-                            <p class="mt-4 max-w-3xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:max-w-4xl">
-                                4+ years bridging product design and implementation, and currently leading design for one of ODILO’s products. I’ve recently stepped fully into a Design Engineer scope, getting hands-on with code to translate design decisions into production-ready UI. I build and scale design systems from tokens to accessible, reusable component patterns, partnering closely with engineers to reduce rework, increase consistency, and ship faster with confidence.
+                            <p class="mt-4 max-w-3xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:max-w-4xl" data-i18n="resume.intro">
+                                4+ years bridging product design and implementation, and currently leading design for one of ODILO's products. I've recently stepped fully into a Design Engineer scope, getting hands-on with code to translate design decisions into production-ready UI. I build and scale design systems from tokens to accessible, reusable component patterns, partnering closely with engineers to reduce rework, increase consistency, and ship faster with confidence.
                             </p>
                         </div>
                     </section>
 
                     <!-- Professional Experience -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Professional Experience</h3>
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.section.experience">Professional Experience</h3>
                         <ol class="resume-section-card space-y-8 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                                                         <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
@@ -90,11 +99,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/odilo-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">ODILO  |  Design Engineer</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.exp1.title">ODILO  |  Design Engineer</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">🎉 April 2026 - Present · Spain (Remote)</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.exp1.date">🎉 April 2026 - Present · Spain (Remote)</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.exp1.desc">
                                     I co-lead the design system implementation into the production codebase alongside the frontend team, building token architecture, semantic layers, components, and production-ready screens, shipping UI fixes and features directly in the repo while leveraging AI-driven workflows to accelerate the design-to-shipping pipeline.
                                 </p>
                             </li>
@@ -104,11 +113,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/odilo-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">ODILO  |  Product Designer</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.exp2.title">ODILO  |  Product Designer</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">July 2022 - March 2026 · Spain (Remote)</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.exp2.date">July 2022 - March 2026 · Spain (Remote)</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.exp2.desc">
                                     As the first design hire, I built the design function from scratch and set scalable UX foundations. I aligned product and engineering around user-centered practices and led end-to-end UX/UI from discovery to delivery.
                                 </p>
                             </li>
@@ -118,11 +127,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/pktnm-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Pakatnamú  |  Web Designer & Marketing Lead</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.exp3.title">Pakatnamú  |  Web Designer & Marketing Lead</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">January 2020 - March 2022 · Peru (Remote)</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.exp3.date">January 2020 - March 2022 · Peru (Remote)</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.exp3.desc">
                                     Contributed to raising S/ 88,000+ for cultural initiatives by leading UX/UI and marketing for a crowdfunding platform, improving conversion funnels and community engagement.
                                 </p>
                             </li>
@@ -132,11 +141,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/peruke-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Peruke  |  Designer & Marketing Assistant</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.exp4.title">Peruke  |  Designer & Marketing Assistant</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">January 2020 - January 2022 · Peru (Remote)</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.exp4.date">January 2020 - January 2022 · Peru (Remote)</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.exp4.desc">
                                     Collaborated on music branding, web presence, and campaigns, coordinating vendors and tracking basic performance metrics to improve digital reach.
                                 </p>
                             </li>
@@ -146,11 +155,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border  border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/arodav-logo.svg" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Arodav  |  Web & Graphic Design, Branding (Freelance)</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.exp5.title">Arodav  |  Web & Graphic Design, Branding (Freelance)</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">2018 - 2021 · Peru (Remote)</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.exp5.date">2018 - 2021 · Peru (Remote)</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.exp5.desc">
                                     Designed and built projects for 20+ clients across music, hospitality, e-commerce, and social initiatives. Delivered accessible, maintainable websites and brand systems for consistent, cohesive identities.
                                 </p>
                             </li>
@@ -159,7 +168,7 @@
 
                     <!-- Education -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Education</h3>
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.section.education">Education</h3>
                         <ol class="resume-section-card space-y-8 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                             <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
@@ -167,11 +176,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/uoc-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Universitat Oberta de Catalunya</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.edu1.title">Universitat Oberta de Catalunya</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">2024 - Present</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.edu1.date">2024 - Present</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">Master's Degree in Website and Web Application Development</p>
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.edu1.desc">Master's Degree in Website and Web Application Development</p>
                             </li>
                             <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
@@ -179,11 +188,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/eoi-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Escuela de Organización Industrial</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.edu2.title">Escuela de Organización Industrial</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">March - June 2022</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.edu2.date">March - June 2022</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">Front-End Web Design & Development Course · 380.5 teaching hours · Official certificate</p>
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.edu2.desc">Front-End Web Design & Development Course · 380.5 teaching hours · Official certificate</p>
                             </li>
                             <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
@@ -191,11 +200,11 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/urp-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Universidad Ricardo Palma</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.edu3.title">Universidad Ricardo Palma</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">2014 - 2019 · Lima, Peru</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.edu3.date">2014 - 2019 · Lima, Peru</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">Bachelor's Degree in Marketing and Business Administration</p>
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.edu3.desc">Bachelor's Degree in Marketing and Business Administration</p>
                             </li>
                             <li>
                                 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-x-4">
@@ -203,32 +212,32 @@
                                         <span class="inline-flex h-9 w-9 md:h-7 md:w-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
                                             <img src="/assets/platzi-logo.webp" alt="" class="h-full w-full object-cover" />
                                         </span>
-                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Platzi</h4>
+                                        <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.edu4.title">Platzi</h4>
                                     </div>
-                                    <span class="text-sm text-zinc-500 dark:text-zinc-400">2023 - Present</span>
+                                    <span class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="resume.edu4.date">2023 - Present</span>
                                 </div>
-                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300">Online school for Product Design, Web Development & AI · 600+ learning hours, 30+ courses, 10 certificates</p>
+                                <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="resume.edu4.desc">Online school for Product Design, Web Development & AI · 600+ learning hours, 30+ courses, 10 certificates</p>
                             </li>
                         </ol>
                     </section>
 
                     <!-- Achievements & Volunteering -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Achievements & Volunteering</h3>
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.section.achievements">Achievements & Volunteering</h3>
                         <ul class="resume-section-card space-y-5 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                             <li>
-                                <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Leftherian  |  2017 ASEP Hackathon Winners</h4>
-                                <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300">First Intellectual Property Blockchain platform in Latin America.</p>
+                                <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.ach1.title">Leftherian  |  2017 ASEP Hackathon Winners</h4>
+                                <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.ach1.desc">First Intellectual Property Blockchain platform in Latin America.</p>
                             </li>
                             <li>
-                                <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">Second Chance  |  Translation & Interpretation</h4>
-                                <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.ach2.title">Second Chance  |  Translation & Interpretation</h4>
+                                <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.ach2.desc">
                                     Spanish to English and vice versa to facilitate communication between volunteers and communities in vulnerable areas. Organized by the European Union (January 2020).
                                 </p>
                             </li>
                             <li>
-                                <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">La Nueva Semilla  |  Tech Lead & Musician</h4>
-                                <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <h4 class="text-base font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.ach3.title">La Nueva Semilla  |  Tech Lead & Musician</h4>
+                                <p class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.ach3.desc">
                                     Representing the country at cultural festivals and gatherings, volunteer music teacher for children. Digital asset creation and cultural management (2014 – 2021).
                                 </p>
                             </li>
@@ -237,35 +246,35 @@
 
                     <!-- Skills & Interests -->
                     <section class="flex flex-col gap-4">
-                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100">Skills & Interests</h3>
+                        <h3 class="resume-section-title text-xl font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="resume.section.skills">Skills & Interests</h3>
                         <dl class="resume-skills-card space-y-5 rounded-3xl border border-zinc-200 bg-white p-6 md:p-10 dark:border-zinc-800 dark:bg-zinc-900">
                             <div>
-                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">Technical</dt>
-                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400" data-i18n="resume.skills.technical.label">Technical</dt>
+                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.skills.technical">
                                     Design Systems, HTML & CSS/SASS, Style Dictionary, Responsive/Performance web, Figma libraries, prototyping, UX writing, handoff, web design & development, UX/UI, accessibility (WCAG 2.2 AA, ARIA), micro-interactions.
                                 </dd>
                             </div>
                             <div>
-                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">Complementary</dt>
-                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400" data-i18n="resume.skills.complementary.label">Complementary</dt>
+                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.skills.complementary">
                                     Typescript/Angular, Product thinking, Generative & assistive AI, branding.
                                 </dd>
                             </div>
                             <div>
-                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">Tools</dt>
-                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400" data-i18n="resume.skills.tools.label">Tools</dt>
+                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.skills.tools">
                                     Figma (Make, Dev Mode, Figjam, MCP), Framer, Cursor, Jira/Confluence, Adobe Creative Cloud, Affinity, Git/Github/Bitbucket, Visual Studio Code, Claude Code (Anthropic), Codex (OpenAI), Netlify, Storybook, Postman/Swagger.
                                 </dd>
                             </div>
                             <div>
-                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">Languages</dt>
-                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400" data-i18n="resume.skills.languages.label">Languages</dt>
+                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.skills.languages">
                                     Spanish (Native), English C1, Portuguese B1.
                                 </dd>
                             </div>
                             <div>
-                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">Interests</dt>
-                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300">
+                                <dt class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400" data-i18n="resume.skills.interests.label">Interests</dt>
+                                <dd class="mt-1 text-base text-zinc-700 dark:text-zinc-300" data-i18n="resume.skills.interests">
                                     Music production (Ableton Live), Ergonomics, 3D Printing, playlist curation, reading, art & journaling.
                                 </dd>
                             </div>

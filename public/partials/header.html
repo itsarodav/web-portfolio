@@ -17,19 +17,19 @@
         <div class="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-white px-1.5 py-1 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <a data-nav="work" href="/#work"
             class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
-            Work
+            <span data-i18n="nav.work">Work</span>
             </a>
             <a data-nav="about" href="/about.html"
             class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
-            About
+            <span data-i18n="nav.about">About</span>
             </a>
             <a data-nav="contact" href="#contact"
             class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
-            Contact
+            <span data-i18n="nav.contact">Contact</span>
             </a>
             <a data-nav="resume" href="/resume.html"
             class="rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50">
-            Resume
+            <span data-i18n="nav.resume">Resume</span>
             </a>
         </div>
         </div>
@@ -51,6 +51,15 @@
             <svg class="hidden h-5 w-5 dark:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M11.1373 4.00445C7.12757 4.44106 4 7.84485 4 11.9793C4 14.1062 4.8449 16.1459 6.34883 17.6499C7.85276 19.1538 9.89253 19.9987 12.0194 19.9987C16.1449 19.9987 19.5487 16.88 19.9943 12.8703C20.0745 12.1664 19.2992 11.6051 18.622 12.0239C17.8947 12.4881 17.0559 12.7484 16.1934 12.7774C15.331 12.8063 14.4766 12.603 13.7197 12.1885C12.9628 11.7741 12.3312 11.1638 11.891 10.4216C11.4508 9.67942 11.2182 8.83253 11.2175 7.9696C11.2175 7.02509 11.4937 6.13405 11.9659 5.39448C12.3669 4.79748 11.9303 3.94207 11.1373 4.00445Z" fill="currentColor"/>
             </svg>
+        </button>
+
+        <!-- Language toggle -->
+        <button
+            type="button"
+            data-lang-toggle
+            aria-label="Switch language"
+            class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-zinc-200 bg-white text-xs font-bold text-zinc-700 shadow-sm hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800">
+            <span data-lang-label>ES</span>
         </button>
 
         <!-- Social -->
@@ -85,13 +94,13 @@
             >
                 <div class="grid gap-1 p-2">
                     <a data-menu-item href="/#work"
-                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Work</a>
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"><span data-i18n="nav.work">Work</span></a>
                     <a data-menu-item href="/about.html"
-                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">About</a>
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"><span data-i18n="nav.about">About</span></a>
                     <a data-menu-item href="/resume.html"
-                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Resume</a>
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"><span data-i18n="nav.resume">Resume</span></a>
                     <a data-menu-item href="#contact"
-                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800">Contact</a>
+                        class="rounded-xl px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"><span data-i18n="nav.contact">Contact</span></a>
 
                     <div class="my-1 h-px bg-zinc-200/70 dark:bg-zinc-800/70"></div>
 
