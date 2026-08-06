@@ -14,7 +14,8 @@ function initCopyEmail() {
     const buttons = document.querySelectorAll<HTMLButtonElement>("[data-copy-email]");
 
     buttons.forEach((button) => {
-        const feedback = button.parentElement?.querySelector<HTMLElement>("[data-copy-feedback]");
+        const feedbackRoot = button.closest("[data-copy-email]")?.parentElement?.parentElement;
+        const feedback = feedbackRoot?.querySelector<HTMLElement>("[data-copy-feedback]");
 
         button.addEventListener("click", async () => {
             const text = button.dataset.copyText?.trim() || "";
@@ -22,9 +23,56 @@ function initCopyEmail() {
 
             try {
                 await navigator.clipboard.writeText(text);
-                if (feedback) feedback.textContent = "Email copied to clipboard.";
+
+                // Floating feedback tag
+                if (feedback) {
+                    const lang = document.documentElement.lang;
+                    feedback.textContent = lang === "es" ? "Email copiado" : "Email copied";
+                    feedback.classList.remove("bg-red-500");
+                    feedback.classList.add("bg-brand-1");
+                    gsap.killTweensOf(feedback);
+                    gsap.fromTo(
+                        feedback,
+                        { y: 6, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.3,
+                            ease: "power2.out",
+                            onComplete() {
+                                gsap.to(feedback, { y: -4, opacity: 0, duration: 0.25, ease: "power2.in", delay: 1.8 });
+                            },
+                        },
+                    );
+                }
+
+                // Button pulse
+                gsap.fromTo(
+                    button,
+                    { scale: 1 },
+                    { scale: 1.03, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 },
+                );
             } catch {
-                if (feedback) feedback.textContent = "Couldn't copy automatically. Please copy it manually.";
+                if (feedback) {
+                    const lang = document.documentElement.lang;
+                    feedback.textContent = lang === "es" ? "No se pudo copiar" : "Couldn't copy";
+                    feedback.classList.remove("bg-brand-1");
+                    feedback.classList.add("bg-red-500");
+                    gsap.killTweensOf(feedback);
+                    gsap.fromTo(
+                        feedback,
+                        { y: 6, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.3,
+                            ease: "power2.out",
+                            onComplete() {
+                                gsap.to(feedback, { y: -4, opacity: 0, duration: 0.25, ease: "power2.in", delay: 2.5 });
+                            },
+                        },
+                    );
+                }
             }
         });
     });
@@ -39,9 +87,9 @@ heroTl
         { y: 0, opacity: 1, duration: 1.1 },
     )
     .fromTo(
-        ".hero-cta",
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 },
+        ".hero-badge",
+        { y: 12, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, stagger: 0.1 },
         "-=0.3",
     );
 

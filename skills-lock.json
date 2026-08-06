@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "animation-systems": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/animation-systems/SKILL.md",
+      "computedHash": "3b1538b9b7d54531ed0d83745d7748347b0285be6146b50af74b92224301eb3f"
+    },
+    "beautiful-shadows": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/beautiful-shadows/SKILL.md",
+      "computedHash": "cf03e5deece9d7cf226779789c0de6826821e38d90750c2e94839a7354fd352a"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "93f53fd1c0352d3d7ec17b8f73d7351bf76f4821e55d123c9d2abc2c53ba48e4"
+    },
+    "gsap": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/gsap/SKILL.md",
+      "computedHash": "235082f472d7e1db0a290b694356d5544008c4feab1f2016b4e88b7834b8f091"
+    },
+    "interaction-design": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/ui-design/skills/interaction-design/SKILL.md",
+      "computedHash": "d2e2127b91c76b2ed6706ce78bfc7eddcb6b340333f94d3d53d9f65e3253dea2"
+    }
+  }
+}
