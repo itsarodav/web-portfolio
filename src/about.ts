@@ -10,11 +10,15 @@ import { initPageTransition } from "./page-transition";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Reveal main immediately — autoAlpha handles visibility+opacity together.
+// This prevents content from staying hidden while images/partials load.
+gsap.set("main", { autoAlpha: 1 });
+
 // Bio card — entrance animation (above the fold)
 gsap.fromTo(
     ".about-bio-card",
     { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.8, delay: 0.3, ease: "power2.out" },
+    { y: 0, opacity: 1, duration: 0.8, delay: 0.1, ease: "power2.out" },
 );
 
 // Extended bio text — scroll triggered
