@@ -5,82 +5,11 @@ import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
 import { initI18n } from "./i18n";
 import { initEmojiRotator } from "./emoji-rotator";
+import { initCopyEmail } from "./copy-email";
 import { initMobileMenu } from "./mobile-menu";
 import { initPageTransition } from "./page-transition";
 
 gsap.registerPlugin(ScrollTrigger);
-
-function initCopyEmail() {
-    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-copy-email]");
-
-    buttons.forEach((button) => {
-        const feedbackRoot = button.closest("[data-copy-email]")?.parentElement?.parentElement;
-        const feedback = feedbackRoot?.querySelector<HTMLElement>("[data-copy-feedback]");
-
-        button.addEventListener("click", async () => {
-            const text = button.dataset.copyText?.trim() || "";
-            if (!text) return;
-
-            let copied = false;
-            try {
-                if (navigator.clipboard && window.isSecureContext) {
-                    await navigator.clipboard.writeText(text);
-                    copied = true;
-                } else {
-                    // Fallback for mobile / non-secure contexts
-                    const ta = document.createElement("textarea");
-                    ta.value = text;
-                    ta.style.position = "fixed";
-                    ta.style.left = "-9999px";
-                    ta.style.opacity = "0";
-                    document.body.appendChild(ta);
-                    ta.focus();
-                    ta.select();
-                    copied = document.execCommand("copy");
-                    document.body.removeChild(ta);
-                }
-            } catch {
-                copied = false;
-            }
-
-            if (feedback) {
-                const lang = document.documentElement.lang;
-                if (copied) {
-                    feedback.textContent = lang === "es" ? "Email copiado" : "Email copied";
-                    feedback.classList.remove("bg-red-500");
-                    feedback.classList.add("bg-brand-1");
-                } else {
-                    feedback.textContent = lang === "es" ? "No se pudo copiar" : "Couldn't copy";
-                    feedback.classList.remove("bg-brand-1");
-                    feedback.classList.add("bg-red-500");
-                }
-                gsap.killTweensOf(feedback);
-                gsap.fromTo(
-                    feedback,
-                    { y: 6, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 0.3,
-                        ease: "power2.out",
-                        onComplete() {
-                            gsap.to(feedback, { y: -4, opacity: 0, duration: 0.25, ease: "power2.in", delay: 1.8 });
-                        },
-                    },
-                );
-            }
-
-            // Button pulse
-            if (copied) {
-                gsap.fromTo(
-                    button,
-                    { scale: 1 },
-                    { scale: 1.03, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 },
-                );
-            }
-        });
-    });
-}
 
 // Hero entrada
 const heroTl = gsap.timeline({ defaults: { ease: "power2.out" } });

@@ -46,6 +46,10 @@ async function setLang(lang: Lang) {
     applyTranslations();
 }
 
+export function t(key: string): string {
+    return translations[key] ?? key;
+}
+
 export async function initI18n() {
     const lang = getStoredLang();
     await setLang(lang);

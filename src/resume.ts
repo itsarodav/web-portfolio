@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { loadPartials, setActiveNav } from "./includes";
 import { initThemeToggle } from "./theme";
 import { initI18n } from "./i18n";
+import { initCopyEmail } from "./copy-email";
 import { initMobileMenu } from "./mobile-menu";
 import { initPageTransition } from "./page-transition";
 
@@ -94,6 +95,7 @@ await loadPartials();
 setActiveNav();
 initThemeToggle();
 await initI18n();
+initCopyEmail();
 initMobileMenu();
 initPageTransition();
 
