@@ -75,6 +75,31 @@ gsap.fromTo(
     },
 );
 
+// Skill fan — hover (desktop) + tap (mobile) poker-hand reveal
+document.querySelectorAll<HTMLElement>(".skill-fan").forEach((fan) => {
+    const left = fan.querySelector<HTMLElement>(".skill-fan-side:first-child");
+    const center = fan.querySelector<HTMLElement>(".skill-fan-center");
+    const right = fan.querySelector<HTMLElement>(".skill-fan-side:last-child");
+    if (!left || !center || !right) return;
+
+    const tl = gsap.timeline({ paused: true, defaults: { duration: 0.35, ease: "power2.out" } });
+    tl.to(center, { y: -20 }, 0)
+        .to(left, { y: -16, rotation: -28 }, 0)
+        .to(right, { y: -16, rotation: 28 }, 0);
+
+    // Desktop — hover
+    fan.addEventListener("mouseenter", () => tl.play());
+    fan.addEventListener("mouseleave", () => tl.reverse());
+
+    // Mobile — tap: play then auto-reverse after 1s
+    fan.addEventListener("touchstart", () => {
+        if (tl.isActive()) return;
+        tl.play().then(() => {
+            gsap.delayedCall(0.2, () => tl.reverse());
+        });
+    }, { passive: true });
+});
+
 await loadPartials();
 setActiveNav();
 initThemeToggle();
