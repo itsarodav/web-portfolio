@@ -24,6 +24,13 @@ function applyTranslations() {
         }
     });
 
+    document.querySelectorAll<HTMLElement>("[data-i18n-href]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-href")!;
+        if (key in translations) {
+            el.setAttribute("href", translations[key]);
+        }
+    });
+
     document.querySelectorAll<HTMLElement>("[data-i18n-html]").forEach((el) => {
         const key = el.getAttribute("data-i18n-html")!;
         if (key in translations) {
