@@ -15,27 +15,28 @@ export async function loadPartials() {
     ]);
 }
 
+const ACTIVE_CLASSES = ["bg-zinc-200", "dark:bg-zinc-700", "text-zinc-900", "dark:text-white"];
+
+function setDesktopActive(name: string | null) {
+    document.querySelectorAll<HTMLElement>("[data-nav]").forEach((el) => {
+        el.classList.remove(...ACTIVE_CLASSES);
+    });
+    if (name) {
+        document.querySelector(`[data-nav="${name}"]`)?.classList.add(...ACTIVE_CLASSES);
+    }
+}
+
 export function setActiveNav() {
     const path = window.location.pathname;
 
-    const about = document.querySelector('[data-nav="about"]');
-    const work = document.querySelector('[data-nav="work"]');
-    const contact = document.querySelector('[data-nav="contact"]');
-    const resume = document.querySelector('[data-nav="resume"]');
-    const activeClasses = ["bg-zinc-200", "dark:bg-zinc-700", "text-zinc-900", "dark:text-white"];
-
-    // reset
-    [about, work, contact, resume].forEach((el) => {
-        el?.classList.remove(...activeClasses);
-    });
-
-    // active
     if (path.endsWith("about.html")) {
-        about?.classList.add(...activeClasses);
+        setDesktopActive("about");
     } else if (path.endsWith("resume.html")) {
-        resume?.classList.add(...activeClasses);
+        setDesktopActive("resume");
     } else {
-        // home
-        work?.classList.add(...activeClasses);
+        // Home — no active by default, scroll spy takes over
+        setDesktopActive(null);
     }
 }
+
+export { setDesktopActive };

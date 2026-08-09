@@ -2,6 +2,7 @@ import "./styles.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { loadPartials, setActiveNav } from "./includes";
+import { initNavScrollSpy } from "./nav-scroll-spy";
 import { initThemeToggle } from "./theme";
 import { initI18n } from "./i18n";
 import { initCopyEmail } from "./copy-email";
@@ -93,6 +94,7 @@ gsap.fromTo(
 
 await loadPartials();
 setActiveNav();
+initNavScrollSpy();
 initThemeToggle();
 await initI18n();
 initCopyEmail();

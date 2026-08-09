@@ -2,6 +2,7 @@ import "./styles.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { loadPartials, setActiveNav } from "./includes";
+import { initNavScrollSpy } from "./nav-scroll-spy";
 import { initThemeToggle } from "./theme";
 import { initI18n } from "./i18n";
 import { initEmojiRotator } from "./emoji-rotator";
@@ -136,4 +137,6 @@ gsap.fromTo(
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: "power1.out", scrollTrigger: { trigger: "[data-anim='footer']", start: "top 90%" } },
 );
+
+initNavScrollSpy();
 
