@@ -4,11 +4,7 @@ let translations: Record<string, string> = {};
 let isBound = false;
 
 function getStoredLang(): Lang {
-    try {
-        const stored = localStorage.getItem(LANG_KEY);
-        if (stored === "en" || stored === "es") return stored;
-    } catch {}
-    return navigator.language.startsWith("es") ? "es" : "en";
+    return "en";
 }
 
 async function loadTranslations(lang: Lang) {
