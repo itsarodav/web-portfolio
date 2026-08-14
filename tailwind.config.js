@@ -4,6 +4,7 @@ export default {
     content: [
         "./index.html",
         "./about.html",
+        "./mdds-case.html",
         "./src/**/*.{ts,js,html}",
         "./public/partials/**/*.{html}"
     ],

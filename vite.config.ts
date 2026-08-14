@@ -10,6 +10,7 @@ export default defineConfig({
                 index: resolve(__dirname, "index.html"),
                 about: resolve(__dirname, "about.html"),
                 resume: resolve(__dirname, "resume.html"),
+                mddsCase: resolve(__dirname, "mdds-case.html"),
             },
         },
     },

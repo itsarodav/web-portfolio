@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "wlz6zkqhgg");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          const isDark = localStorage.getItem("theme") === "dark";
+          document.documentElement.classList.toggle("dark", isDark);
+          document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+        } catch {}
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          const lang = localStorage.getItem("lang") ||
+            "en";
+          document.documentElement.lang = lang;
+        } catch {}
+      })();
+    </script>
+    <link rel="stylesheet" href="/src/styles.css">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-48x48.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#fefefe">
+    <meta name="apple-mobile-web-app-title" content="Arodav">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Arodav - MDDS Case Study</title>
+    <meta name="description" content="MDDS — Digital Memory Design System. A case study on building a token-based design system from scratch for ODILO's Archive & Preservation product." />
+    <meta name="keywords" content="design system, case study, tokens, design engineer, ODILO, MDDS, Angular, Storybook, arodav">
+  </head>
+
+  <body class="flex min-h-screen flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+    <div data-include="header"></div>
+
+    <main class="mx-auto w-full max-w-6xl grow px-4 pb-14" style="visibility:hidden">
+
+      <!-- Back link -->
+      <nav class="pt-8 pb-6" aria-label="Breadcrumb">
+        <a href="/" class="case-back inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="shrink-0">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="case.mdds.back">Back to work</span>
+        </a>
+      </nav>
+
+      <!-- HERO -->
+      <section class="case-hero opacity-0">
+        <div class="w-full overflow-hidden rounded-3xl border border-zinc-200 shadow-sm dark:border-zinc-800">
+          <div class="aspect-[2.2/1] bg-cover bg-no-repeat" role="img" aria-label="MDDS Design System preview" style="background-image: url('./assets/mdds-pf.webp'); background-position: center 20%"></div>
+        </div>
+
+        <div class="mt-8 space-y-4 md:mt-10">
+          <h1 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-5xl" data-i18n="case.mdds.title">MDDS. Digital Memory Design System</h1>
+
+          <p class="text-base text-zinc-600 dark:text-zinc-400 md:text-lg" data-i18n="case.mdds.tagline">Designed, built, and shipped to production by the same person.</p>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-i18n="case.mdds.role">Design Engineer</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-i18n="case.mdds.company">ODILO</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-i18n="case.mdds.date">January - August 2026</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.overview.title">Three icon generations, directionless components. Zero system.</h2>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.overview.p1">MDDS is the design system I built for ODILO's Archive & Preservation product. Before it existed, every screen defined its own buttons, notices, and icons: three generations of iconography coexisting, colors hardcoded in every stylesheet, and no shared visual language across modules. MDDS replaces all of that with a token layer, reusable components, and a unified icon library — now live in production.</p>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.overview.p2">But the most important change isn't visible on any screen: it's a new way of working. With solid foundations, every design decision stops being solved screen by screen and starts being solved once, in the right layer. That lets us tie the product together with more consistency for our clients, without repeating the same work in every module.</p>
+      </section>
+
+      <!-- TOKENS FIRST, SCREENS LATER -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s1.title">Tokens first, screens later</h2>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s1.intro">The order matters as much as the outcome. Instead of creating components and retrofitting them to a token system, I followed the reverse sequence: tokens first, component second, documentation in parallel, migration last.</p>
+
+        <div class="mt-8 space-y-8">
+          <div class="case-subsection">
+            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p1.title">Why that order.</h3>
+            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p1.body">Building a component before having tokens forces you to rewrite it as soon as the color or typography system changes. Starting with tokens forces you to answer the hard questions first — what's primitive, what's semantic, what depends on usage context — and ensures the component is born consuming variables, not loose values.</p>
+          </div>
+
+          <div class="case-subsection">
+            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p2.title">Token architecture.</h3>
+            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p2.body">I worked in three layers: primitives (the raw palette), semantics (the meaning: error color, surface, secondary text), and utilities (the specific use case inside a component). That intermediate semantic layer is what allows changing brand or theme without touching a single screen: the component doesn't know which hex value it uses — it knows which role that color plays.</p>
+          </div>
+
+          <div class="case-subsection">
+            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p3.title">The Figma-to-code bridge.</h3>
+            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p3.body">Part of the work that isn't visible on any screen was connecting each token name in Figma with its CSS equivalent, so they would stop being maintained manually in two separate places. What's decided in design reaches code with the same name — no manual translation, no margin for error between tools.</p>
+          </div>
+
+          <div class="case-subsection">
+            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p4.title">How I approached each component.</h3>
+            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p4.body">I didn't design screens — I designed pieces the rest of the team could use without asking me for help. That meant accessibility and support for the application's six languages were built into each component from its first commit, not patched in later. And it meant documenting every variant in an internal playground — the system's living reference, used exclusively by the team today.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FROM FIGMA TO PRODUCTION -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s2.title">From Figma to production, without manual translation</h2>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s2.p1">The pipeline extracts Figma variables and processes them to automatically generate the three token layers in CSS. What Figma doesn't handle well — edge cases, fine-tuning — is managed directly in code, without forcing the design tool to do something it wasn't built for.</p>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s2.p2">Four components built from scratch — button, icon button, button group, and message — with variants, states, and accessibility (aria-label, aria-hidden, roles) resolved within the component itself, not as an added layer. An icon library of 190+ icons unified into a single font, replacing three distinct icon generations. In production, used by public institutions with strict accessibility requirements.</p>
+      </section>
+
+      <!-- WORK THAT MULTIPLIES ITSELF -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s3.title">Work that multiplies itself</h2>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s3.p1">Of the 110 live component instances in the product today, one in four was placed by another frontend team member — using components they didn't build. Once a component exists and is documented, the interface keeps improving without me intervening on every new screen. That's the effect a design system should have: work that multiplies itself.</p>
+      </section>
+
+      <!-- BY THE NUMBERS -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s4.title">By the numbers</h2>
+
+        <div class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div class="case-stat rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+            <p class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.stat1.value">440</p>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="case.mdds.stat1.label">design tokens (color, interface, typography)</p>
+          </div>
+          <div class="case-stat rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+            <p class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.stat2.value">190+</p>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="case.mdds.stat2.label">icons in unified library, 60% originally authored</p>
+          </div>
+          <div class="case-stat rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+            <p class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.stat3.value">110</p>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="case.mdds.stat3.label">live instances from 4+ production components</p>
+          </div>
+          <div class="case-stat rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+            <p class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.stat5.value">24%</p>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="case.mdds.stat5.label">of instances built by the rest of the team, without direct intervention</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT COMES NEXT -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s5.title">What comes next</h2>
+        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s5.p1">A brand or palette change now happens in the token layer, not screen by screen. Each new component makes the next one cheaper: table, navigation, and forms are the natural next candidates — and they already have tokens, icons, and a proven migration pattern in place.</p>
+      </section>
+
+      <div class="mt-16"></div>
+      <div id="contact" class="scroll-mt-24" data-include="contact"></div>
+    </main>
+    <div data-include="footer"></div>
+    <script type="module" src="/src/mdds-case.ts"></script>
+  </body>
+</html>
