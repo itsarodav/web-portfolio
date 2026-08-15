@@ -112,7 +112,7 @@
 
   "case.mdds.back": "Volver al trabajo",
 "case.mdds.title": "Dise\u00f1ado, desarrollado y en producci\u00f3n En solitario.",
-  "case.mdds.subtitle": "MDDS. Memoria Digital Design System",
+  "case.mdds.subtitle": "MDDS. Memoria Digital Design System. Ahora con m\u00e1s de 110 instancias en producci\u00f3n, una cuarta parte implementadas por otros devs.",
   "case.mdds.role": "Design Engineer",
   "case.mdds.company": "ODILO",
   "case.mdds.date": "Desde abril 2026",
@@ -126,10 +126,14 @@
   "case.mdds.s1.p3.title": "El puente entre Figma y c\u00f3digo.",
   "case.mdds.s1.p3.body": "Una parte del trabajo que no se ve en ninguna pantalla fue conectar el nombre de cada token en Figma con su equivalente en CSS, para que dejaran de mantenerse a mano en dos sitios distintos. Lo que se decide en dise\u00f1o llega a c\u00f3digo con el mismo nombre, sin traducci\u00f3n manual ni margen de error entre herramientas.",
   "case.mdds.s1.p4.title": "C\u00f3mo pens\u00e9 cada componente.",
-  "case.mdds.s1.p4.body": "No dise\u00f1\u00e9 pantallas, dise\u00f1\u00e9 piezas que el resto del equipo pudiera usar sin pedirme ayuda. Eso signific\u00f3 accesibilidad y soporte a los seis idiomas de la aplicaci\u00f3n integrados desde el primer commit de cada componente, no a\u00f1adidos despu\u00e9s como parche. Y signific\u00f3 documentar cada variante en un playground interno, la referencia viva del sistema, hoy de uso exclusivo del equipo.",
+  "case.mdds.s1.p4.body": "No dise\u00f1\u00e9 pantallas, dise\u00f1\u00e9 piezas que el resto del equipo pudiera usar sin pedirme ayuda. Eso signific\u00f3 accesibilidad y soporte a los seis idiomas de la aplicaci\u00f3n integrados desde el primer commit de cada componente, no a\u00f1adidos despu\u00e9s como parche. Y signific\u00f3 documentar cada variante en un playground interno, la referencia de trabajo del equipo hoy, evolucionando hacia un producto interno compartible a medida que crece el set de componentes.",
   "case.mdds.s2.title": "De Figma a producci\u00f3n, sin traducci\u00f3n manual",
   "case.mdds.s2.p1": "El pipeline extrae las variables de Figma y las procesa para generar autom\u00e1ticamente las tres capas de tokens en CSS. Lo que Figma no resuelve bien (casos de borde, ajustes finos) se gestiona directamente en c\u00f3digo, sin forzar la herramienta de dise\u00f1o a hacer algo para lo que no est\u00e1 pensada.",
   "case.mdds.s2.p2": "Cuatro componentes construidos desde cero (bot\u00f3n, bot\u00f3n de icono, grupo de botones y mensaje) con variantes, estados y accesibilidad (aria-label, aria-hidden, roles) resueltos dentro del propio componente, no como capa a\u00f1adida. Una librer\u00eda de m\u00e1s de 190 iconos unificada en una sola fuente tipogr\u00e1fica, reemplazando tres generaciones distintas de iconograf\u00eda. En producci\u00f3n, usado por instituciones p\u00fablicas con requisitos altos de accesibilidad.",
+  "case.mdds.s2b.title": "Documentaci\u00f3n como sesi\u00f3n de trabajo",
+  "case.mdds.s2b.p1": "El playground no es documentaci\u00f3n escrita despu\u00e9s del hecho. Se construye en pairing continuo con el ingeniero frontend senior de la empresa: qu\u00e9 variantes necesita un componente, c\u00f3mo maneja los casos l\u00edmite, c\u00f3mo viaja una decisi\u00f3n desde Figma al c\u00f3digo sin perder la intenci\u00f3n. Esa revisi\u00f3n compartida es lo que hace que el sistema sea seguro para que otros devs construyan sobre \u00e9l sin preguntar primero. Ahora lo estamos extendiendo con skills y workflows ag\u00e9nticos, para que consumir un token o componente sea a\u00fan m\u00e1s simple para el resto del equipo.",
+  "case.mdds.s2c.title": "D\u00f3nde estaba la fricci\u00f3n",
+  "case.mdds.s2c.p1": "Lo m\u00e1s dif\u00edcil no fue lo t\u00e9cnico. Esta vertical de producto nunca hab\u00eda tenido una funci\u00f3n de dise\u00f1o. Al principio, eso signific\u00f3 definir criterios de aceptaci\u00f3n y handoffs desde cero, iter\u00e1ndolos con ingenier\u00eda sobre la marcha. Como design engineer, la fricci\u00f3n se movi\u00f3 hacia abajo: hacer que cada componente fuera lo bastante robusto para soportar cada variante que una pantalla real le lanza, trabajado directamente con el ingeniero frontend senior antes de que el c\u00f3digo llegue a producci\u00f3n. El valor que aporto ahora vive en producci\u00f3n, no en un handoff.",
   "case.mdds.s3.title": "El trabajo que se multiplica solo",
   "case.mdds.s3.p1": "De las 110 instancias de estos componentes vivas hoy en el producto, una de cada cuatro las coloc\u00f3 otra persona del equipo de frontend, usando componentes que no construy\u00f3. Una vez el componente existe y est\u00e1 documentado, la interfaz sigue mejorando sin que yo intervenga en cada pantalla nueva. Ese es el efecto que busca un design system: que el trabajo se multiplique solo.",
   "case.mdds.s4.title": "En n\u00fameros",
@@ -142,5 +146,5 @@
   "case.mdds.stat5.value": "24%",
   "case.mdds.stat5.label": "de esas instancias construidas por el resto del equipo, sin intervenci\u00f3n directa",
   "case.mdds.s5.title": "Lo que viene despu\u00e9s",
-  "case.mdds.s5.p1": "Un cambio de marca o de paleta ahora se hace en la capa de tokens, no pantalla a pantalla. Cada componente nuevo abarata el siguiente: tabla, navegaci\u00f3n y formularios son los pr\u00f3ximos candidatos naturales, y ya cuentan con tokens, iconos y un patr\u00f3n de migraci\u00f3n probado."
+  "case.mdds.s5.p1": "Un cambio de marca o de paleta ahora ocurre en la capa de tokens, no pantalla por pantalla. Cada componente nuevo se apoya en lo que ya existe, as\u00ed que el siguiente sale m\u00e1s r\u00e1pido y m\u00e1s ligero que el anterior. Tabla, navegaci\u00f3n y formularios son los pr\u00f3ximos: heredan tokens, iconos y un patr\u00f3n de migraci\u00f3n ya probado en producci\u00f3n. Cada migraci\u00f3n tambi\u00e9n elimina deuda t\u00e9cnica real, con un impacto directo tanto en la velocidad del producto como en el resultado del negocio. El sistema no est\u00e1 terminado. Se sigue multiplicando."
 }

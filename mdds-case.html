@@ -78,9 +78,9 @@
         </div>
 
         <div class="mt-8 space-y-4 md:mt-10">
-          <h1 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-5xl" data-i18n="case.mdds.title">Designed, engineered, and shipped. Solo.</h1>
+          <h1 class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-4xl" data-i18n="case.mdds.title">Designed, engineered, and shipped. Solo.</h1>
 
-          <h2 class="text-xl text-zinc-600 dark:text-zinc-400 md:text-2xl font-medium" data-i18n="case.mdds.subtitle">MDDS. Digital Memory Design System</h2>
+          <h2 class="text-lg text-zinc-600 dark:text-zinc-400 md:text-xl font-medium" data-i18n="case.mdds.subtitle">MDDS. Digital Memory Design System. Now running 110+ live instances in production, a quarter of them shipped by other devs.</h2>
 
           <div class="flex flex-wrap gap-2 pt-2">
             <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-i18n="case.mdds.role">Design Engineer</span>
@@ -92,50 +92,62 @@
 
       <!-- OVERVIEW -->
       <section class="case-section mt-12 md:mt-16">
-        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.overview.title">Three icon generations, directionless components. Zero system.</h2>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.overview.p1">MDDS is the design system I built for ODILO's Archive & Preservation product. Before it existed, every screen defined its own buttons, notices, and icons: three generations of iconography coexisting, colors hardcoded in every stylesheet, and no shared visual language across modules. MDDS replaces all of that with a token layer, reusable components, and a unified icon library — now live in production.</p>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.overview.p2">But the most important change isn't visible on any screen: it's a new way of working. With solid foundations, every design decision stops being solved screen by screen and starts being solved once, in the right layer. That lets us tie the product together with more consistency for our clients, without repeating the same work in every module.</p>
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.overview.title">Three icon generations, directionless components. Zero system.</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.overview.p1">MDDS is the design system I built for ODILO's Archive & Preservation product. Before it existed, every screen defined its own buttons, notices, and icons: three generations of iconography coexisting, colors hardcoded in every stylesheet, and no shared visual language across modules. MDDS replaces all of that with a token layer, reusable components, and a unified icon library — now live in production.</p>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.overview.p2">But the most important change isn't visible on any screen: it's a new way of working. With solid foundations, every design decision stops being solved screen by screen and starts being solved once, in the right layer. That lets us tie the product together with more consistency for our clients, without repeating the same work in every module.</p>
       </section>
 
       <!-- TOKENS FIRST, SCREENS LATER -->
       <section class="case-section mt-12 md:mt-16">
-        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s1.title">Tokens first, screens later</h2>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s1.intro">The order matters as much as the outcome. Instead of creating components and retrofitting them to a token system, I followed the reverse sequence: tokens first, component second, documentation in parallel, migration last.</p>
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s1.title">Tokens first, screens later</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s1.intro">The order matters as much as the outcome. Instead of creating components and retrofitting them to a token system, I followed the reverse sequence: tokens first, component second, documentation in parallel, migration last.</p>
 
         <div class="mt-8 space-y-8">
           <div class="case-subsection">
-            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p1.title">Why that order.</h3>
-            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p1.body">Building a component before having tokens forces you to rewrite it as soon as the color or typography system changes. Starting with tokens forces you to answer the hard questions first — what's primitive, what's semantic, what depends on usage context — and ensures the component is born consuming variables, not loose values.</p>
+            <h3 class="text-base font-semibold text-zinc-900 dark:text-zinc-100 md:text-lg" data-i18n="case.mdds.s1.p1.title">Why that order.</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s1.p1.body">Building a component before having tokens forces you to rewrite it as soon as the color or typography system changes. Starting with tokens forces you to answer the hard questions first — what's primitive, what's semantic, what depends on usage context — and ensures the component is born consuming variables, not loose values.</p>
           </div>
 
           <div class="case-subsection">
-            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p3.title">The Figma-to-code bridge.</h3>
-            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p3.body">Part of the work that isn't visible on any screen was connecting each token name in Figma with its CSS equivalent, so they would stop being maintained manually in two separate places. What's decided in design reaches code with the same name — no manual translation, no margin for error between tools.</p>
+            <h3 class="text-base font-semibold text-zinc-900 dark:text-zinc-100 md:text-lg" data-i18n="case.mdds.s1.p3.title">The Figma-to-code bridge.</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s1.p3.body">Part of the work that isn't visible on any screen was connecting each token name in Figma with its CSS equivalent, so they would stop being maintained manually in two separate places. What's decided in design reaches code with the same name — no manual translation, no margin for error between tools.</p>
           </div>
 
           <div class="case-subsection">
-            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100" data-i18n="case.mdds.s1.p4.title">How I approached each component.</h3>
-            <p class="mt-2 text-base leading-relaxed text-zinc-700 dark:text-zinc-300" data-i18n="case.mdds.s1.p4.body">I didn't design screens — I designed pieces the rest of the team could use without asking me for help. That meant accessibility and support for the application's six languages were built into each component from its first commit, not patched in later. And it meant documenting every variant in an internal playground — the system's living reference, used exclusively by the team today.</p>
+            <h3 class="text-base font-semibold text-zinc-900 dark:text-zinc-100 md:text-lg" data-i18n="case.mdds.s1.p4.title">How I approached each component.</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s1.p4.body">I didn't design screens — I designed pieces the rest of the team could use without asking me for help. That meant accessibility and support for the application's six languages were built into each component from its first commit, not patched in later. And it meant documenting every variant in an internal playground, the team's working reference today, evolving toward a shareable internal product as the component set grows.</p>
           </div>
         </div>
       </section>
 
       <!-- FROM FIGMA TO PRODUCTION -->
       <section class="case-section mt-12 md:mt-16">
-        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s2.title">From Figma to production, without manual translation</h2>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s2.p1">The pipeline extracts Figma variables and processes them to automatically generate the three token layers in CSS. What Figma doesn't handle well — edge cases, fine-tuning — is managed directly in code, without forcing the design tool to do something it wasn't built for.</p>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s2.p2">Four components built from scratch — button, icon button, button group, and message — with variants, states, and accessibility (aria-label, aria-hidden, roles) resolved within the component itself, not as an added layer. An icon library of 190+ icons unified into a single font, replacing three distinct icon generations. In production, used by public institutions with strict accessibility requirements.</p>
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s2.title">From Figma to production, without manual translation</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s2.p1">The pipeline extracts Figma variables and processes them to automatically generate the three token layers in CSS. What Figma doesn't handle well — edge cases, fine-tuning — is managed directly in code, without forcing the design tool to do something it wasn't built for.</p>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s2.p2">Four components built from scratch — button, icon button, button group, and message — with variants, states, and accessibility (aria-label, aria-hidden, roles) resolved within the component itself, not as an added layer. An icon library of 190+ icons unified into a single font, replacing three distinct icon generations. In production, used by public institutions with strict accessibility requirements.</p>
+      </section>
+
+      <!-- DOCUMENTATION AS A WORKING SESSION -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s2b.title">Documentation as a working session</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s2b.p1">The playground isn't documentation written after the fact. It's shaped in continuous pairing with the company's senior frontend engineer: what variants a component needs, how it handles edge cases, how a decision travels from Figma into code without losing intent. That shared review is what makes the system safe for other devs to build on without asking first. We're now extending it with agentic skills and workflows, so consuming a token or component gets even simpler for the rest of the team.</p>
+      </section>
+
+      <!-- WHERE THE FRICTION WAS -->
+      <section class="case-section mt-12 md:mt-16">
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s2c.title">Where the friction was</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s2c.p1">The hardest part wasn't technical. This product vertical had never had a design function. Early on, that meant defining acceptance criteria and handoffs from zero, iterating them with engineering as we went. As design engineer, the friction moved downstream: making each component robust enough to hold every variant a real screen throws at it, worked out directly with the senior frontend engineer before code ships. The value I add now lives in production, not in a handoff.</p>
       </section>
 
       <!-- WORK THAT MULTIPLIES ITSELF -->
       <section class="case-section mt-12 md:mt-16">
-        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s3.title">Work that multiplies itself</h2>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s3.p1">Of the 110 live component instances in the product today, one in four was placed by another frontend team member — using components they didn't build. Once a component exists and is documented, the interface keeps improving without me intervening on every new screen. That's the effect a design system should have: work that multiplies itself.</p>
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s3.title">Work that multiplies itself</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s3.p1">Of the 110 live component instances in the product today, one in four was placed by another frontend team member — using components they didn't build. Once a component exists and is documented, the interface keeps improving without me intervening on every new screen. That's the effect a design system should have: work that multiplies itself.</p>
       </section>
 
       <!-- BY THE NUMBERS -->
       <section class="case-section mt-12 md:mt-16">
-        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s4.title">By the numbers</h2>
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s4.title">By the numbers</h2>
 
         <div class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
           <div class="case-stat rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
@@ -159,8 +171,8 @@
 
       <!-- WHAT COMES NEXT -->
       <section class="case-section mt-12 md:mt-16">
-        <h2 class="case-section-title text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-3xl" data-i18n="case.mdds.s5.title">What comes next</h2>
-        <p class="mt-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg" data-i18n="case.mdds.s5.p1">A brand or palette change now happens in the token layer, not screen by screen. Each new component makes the next one cheaper: table, navigation, and forms are the natural next candidates — and they already have tokens, icons, and a proven migration pattern in place.</p>
+        <h2 class="case-section-title text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-2xl" data-i18n="case.mdds.s5.title">What comes next</h2>
+        <p class="mt-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base" data-i18n="case.mdds.s5.p1">A brand or palette change now happens in the token layer, not screen by screen. Each new component builds on what's already there, so the next one comes together faster and lighter than the last. Table, navigation, and forms are next: they inherit tokens, icons, and a migration pattern already proven in production. Every migration also retires real technical debt, with a direct impact on both product velocity and the business bottom line. The system isn't finished. It's compounding.</p>
       </section>
 
       <div class="mt-16"></div>
